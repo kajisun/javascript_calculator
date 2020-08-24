@@ -1,0 +1,131 @@
+$button: #4d4d4d;
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
+}
+
+#root {
+    background: #c2c2d6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.App {
+    background: black;
+    border: 2px solid #47476b;
+    padding: 5px;
+    width: 320px;
+    position: relative;
+}
+
+button {
+    color: white;
+    background-color: $button;
+    outline: 1px solid black;
+    border: none;
+    font-family: Share Tech Mono, monospace;
+    font-size: 20px;
+    &:hover {
+        color: black;
+        outline: .05em solid grey;
+        z-index: 3;
+    }   
+}
+
+#formula {
+    min-height: 20px;
+    font-size: 20px;
+    font-family: digital;
+    color: orange;
+    text-align: right;
+    vertical-align: text-top;
+    line-height: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+#keybord {
+    display: grid;
+    grid-template-areas:
+        "AC AC divide multiply"
+        "seven eight nine subtract"
+        "four five six add"
+        "one two three equals"
+        "zero zero decimal equals";
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 65px;
+}
+
+#display {
+    font-size: 29px;
+    font-family: digital;
+    color: white;
+    text-align: right;
+    line-height: 35px;
+}
+
+.operators {
+    background-color: #666666;
+}
+
+#clear {
+    grid-area: AC;
+    background-color: #ac3939;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#multiply {
+    grid-area: multiply;
+}
+
+#subtract {
+    grid-area: subtract;
+}
+
+#add {
+    grid-area: add;
+}
+
+#equals {
+    grid-area: equals;
+    background-color: #004466;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
